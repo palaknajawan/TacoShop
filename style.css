@@ -1,21 +1,136 @@
+/* Base HTML font size */
 html {
   font-size: 22px;
 }
 
+/* Body styles */
 body {
   min-height: 100vh;
   max-width: 800px;
   margin: 0 auto;
   padding: 1rem;
-  border-left: 1px solid #333;
-  border-right: 1px solid #333;
+  border-left: 1px solid #e94e77; /* Left border color */
+  border-right: 1px solid #e94e77; /* Right border color */
+  background-color: #fff3e6; /* Light peach background for contrast */
+  font-family: 'Arial', sans-serif; /* General font */
+  color: #333; /* Text color */
 }
 
-th,
-td,
-caption {
-  border: 1px solid #333;
+/* Table styles */
+th, td, caption {
+  border: 1px solid #e94e77; /* Table border color */
   font-family: "Courier New", Courier, monospace;
   border-collapse: separate;
   padding: 0.5rem;
+  background-color: #fff; /* White background for table cells */
+}
+
+/* General heading styles */
+h1, h2, h3 {
+  color: #d35400; /* Warm orange color for headings */
+}
+
+/* Navigation styles */
+nav {
+  background-color: #ffebcd; /* Blanched almond background for nav */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Enhanced shadow effect */
+  border-radius: 10px; /* Rounded corners for nav */
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 10px 0;
+}
+
+nav ul li {
+  margin: 0 15px; /* Margin between nav items */
+}
+
+nav a {
+  text-decoration: none;
+  color: #d35400; /* Warm orange color for links */
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.3s ease; /* Transition effects */
+}
+
+nav a:hover {
+  color: #c0392b; /* Darker orange on hover */
+  transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+/* Figure styles */
+figure {
+  text-align: center; /* Center align figures */
+}
+
+img {
+  border-radius: 15px; /* Rounded corners for images */
+  filter: brightness(90%) contrast(110%) saturate(120%); /* Dimmed and enhanced colors */
+  transition: filter 0.3s, transform 0.3s; /* Transition for hover effect */
+}
+
+img:hover {
+  filter: brightness(100%) contrast(120%) saturate(130%); /* Brighter on hover */
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Main content styles */
+main {
+  max-width: 800px; /* Limit main content width */
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff; /* White background for main */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+}
+
+h2 {
+  border-bottom: 2px solid #e94e77; /* Underline for subheadings */
+  padding-bottom: 5px; /* Space below the heading */
+}
+
+/* Footer styles */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #ffebcd; /* Same background as nav */
+  border-top: 1px solid #e9e9e9; /* Top border for footer */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav ul {
+      flex-direction: column; /* Stack navigation vertically on smaller screens */
+      padding: 0; /* Reset padding */
+  }
+
+  nav ul li {
+      margin: 10px 0; /* Margin for stacked items */
+  }
+
+  img {
+      width: 100%; /* Full width images on small screens */
+      height: auto; /* Maintain aspect ratio */
+  }
+
+  main {
+      margin: 10px; /* Reduced margin on main content */
+      padding: 15px; /* Reduced padding */
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+      font-size: 1.8em; /* Smaller font size for h1 */
+  }
+
+  h2 {
+      font-size: 1.5em; /* Smaller font size for h2 */
+  }
+
+  nav ul {
+      font-size: 0.9em; /* Smaller font size for nav links */
+  }
 }
